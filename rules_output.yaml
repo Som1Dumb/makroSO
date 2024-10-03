@@ -1,0 +1,47 @@
+  - action: Allow
+    name: rule-0
+    priority: 100
+    rules:
+      - destination_addresses:
+          - 10.10.10.0/24
+        destination_ports:
+          - ALL
+        name: rule-source-0
+        protocols:
+          - TCEP
+          - UDP
+          - Any
+        source_addresses:
+          - 0.0.0.0/0
+  - action: Allow
+    name: rule-1
+    priority: 100
+    rules:
+      - destination_addresses:
+          - 10.10.10.0/24
+        destination_ports:
+          - '22'
+        name: rule-source-1
+        protocols:
+          - TCEP
+          - UDP
+          - Any
+        source_addresses:
+          - 10.0.0.0/16
+          - 10.10.10.0/16
+  - action: Allow
+    name: rule-2
+    priority: 100
+    rules:
+      - destination_addresses:
+          - 10.10.10.0/24
+        destination_ports:
+          - 300-399
+        name: rule-source-2
+        protocols:
+          - TCEP
+          - UDP
+          - Any
+        source_addresses:
+          - 10.0.0.0/16
+          - 10.10.10.0/16
