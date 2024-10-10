@@ -12,16 +12,16 @@
   action: Allow
   rules:
     - name: rule-source-1
-      protocols: ['TCEP', 'UDP', 'Any']
+      protocols: ['Any']
       source_addresses: ['10.0.0.0/16', '10.10.10.0/16']
-      destination_addresses: ['10.10.10.0/24']
+      destination_addresses: ['0.0.0.0/0']
       destination_ports: ['22']
 - name: rule-2
   priority: 100
   action: Allow
   rules:
     - name: rule-source-2
-      protocols: ['TCEP', 'UDP', 'Any']
-      source_addresses: ['10.0.0.0/16', '10.10.10.0/16']
-      destination_addresses: ['10.10.10.0/24']
+      protocols: ['Any']
+      source_addresses: ['0.0.0.0/0']
+      destination_addresses: ['0.0.0.0/0']
       destination_ports: ['300-399']
